@@ -59,14 +59,14 @@ with col3:
 
 
 if st.button('Predict Diamond Price'):
-    user_input = [carat, cut, color, clarity, depth, table, price, x, y, z]
+    user_input = [carat, cut, color, clarity, depth, table,  x, y, z]
 
     # Convert user input to float
     user_input = [float(x) for x in user_input]
 
 
     # Preprocess input data
-    data = preprocess_data(carat, cut, color, clarity, depth, table, price, x, y, z)
+    data = preprocess_data(carat, cut, color, clarity, depth, table, x, y, z)
     # Convert user input to float
     user_input = [float(x) for x in data]
     # Make predictions using the model
