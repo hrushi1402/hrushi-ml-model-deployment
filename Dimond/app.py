@@ -32,7 +32,7 @@ def preprocess_data(carat, cut, color, clarity, depth, table, price, x, y, z):
         'clarity': [clarity_encoded],
         'depth': [depth],
         'table': [table],
-        'price': [price],
+       # 'price': [price],
         'x': [x],
         'y': [y],
         'z': [z]
