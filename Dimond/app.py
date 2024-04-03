@@ -55,7 +55,7 @@ with col2:
 with col3:
     x = st.number_input("x")
     y = st.number_input("y")
-    z = st.text_input('z')
+    z = st.text_input("z")
 
 
 if st.button('Predict Diamond Price'):
