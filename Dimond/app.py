@@ -51,7 +51,7 @@ def main():
     clarity = st.selectbox("Clarity", ["IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "I1"])
     depth = st.number_input("Depth")
     table = st.number_input("Table")
-    price = st.number_input("price")
+    #price = st.number_input("price")
     x = st.number_input("x")
     y = st.number_input("y")
     z = st.number_input("z")
