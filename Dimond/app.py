@@ -61,10 +61,6 @@ with col3:
 if st.button('Predict Diamond Price'):
     user_input = [carat, cut, color, clarity, depth, table,  x, y, z]
 
-    # Convert user input to float
-    user_input = [float(x) for x in user_input]
-
-
     # Preprocess input data
     data = preprocess_data(carat, cut, color, clarity, depth, table, x, y, z)
     # Convert user input to float
@@ -77,31 +73,5 @@ if st.button('Predict Diamond Price'):
     st.write("Predicted price:", prediction[0])
 
    
-# Main Streamlit app
-'''def main():
-    st.title("Diamond Price Predictor")
-    
-    # Input form for user to input data
-    carat = st.number_input("Carat")
-    cut = st.selectbox("Cut", ["Ideal", "Premium", "Very Good", "Good", "Fair"])
-    color = st.selectbox("Color", ["D", "E", "F", "G", "H", "I", "J"])
-    clarity = st.selectbox("Clarity", ["IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "I1"])
-    depth = st.number_input("Depth")
-    table = st.number_input("Table")
-    #price = st.number_input("price")
-    x = st.number_input("x")
-    y = st.number_input("y")
-    z = st.number_input("z")
-    
-    # Preprocess input data
-    data = preprocess_data(carat, cut, color, clarity, depth, table, price, x, y, z)
-    
-    # Make predictions using the model
-    prediction = model.predict(data)
-    
-    # Display the prediction to the user
-    st.subheader("Prediction")
-    st.write("Predicted price:", prediction[0])
 
-if __name__ == "__main__":
-    main()'''
+
