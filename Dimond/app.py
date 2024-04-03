@@ -2,8 +2,14 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+import os
+
+
+# Getting the working directory of the main.py
+working_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Load the saved model
-with open("Diamond.pkl", "rb") as f:
+with open(f"{working_dir}/Diamond.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Define mappings for categorical variables
