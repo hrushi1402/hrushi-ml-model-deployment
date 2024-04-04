@@ -24,9 +24,21 @@ def preprocess_data(carat, cut, color, clarity, depth, table, x, y, z):
     color_encoded = color_n.get(color, 0)  # Use 0 as default value if color not found
     clarity_encoded = clarity_n.get(clarity, 0)  # Use 0 as default value if clarity not found
     
-  
+    # Create DataFrame with preprocessed data
+    data = pd.DataFrame({
+        'carat': [carat],
+        'cut': [cut_encoded],
+        'color': [color_encoded],
+        'clarity': [clarity_encoded],
+        'depth': [depth],
+        'table': [table],
+        'x': [x],
+        'y': [y],
+        'z': [z]
+    })
     
     return data
+
 # Creating buttons
 col1, col2, col3 = st.columns(3)
 
@@ -47,19 +59,12 @@ with col3:
 
 
 if st.button('Predict Diamond Price'):
-    user_input = [carat, cut, color, clarity, depth, table,  x, y, z]
-
     # Preprocess input data
     data = preprocess_data(carat, cut, color, clarity, depth, table, x, y, z)
-    # Convert user input to float
-    user_input = [float(x) for x in data]
+    
     # Make predictions using the model
     prediction = model.predict(data)
     
     # Display the prediction to the user
     st.subheader("Prediction")
     st.write("Predicted price:", prediction[0])
-
-   
-
-
