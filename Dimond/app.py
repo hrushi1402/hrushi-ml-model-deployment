@@ -47,14 +47,13 @@ st.set_page_config(page_title="Predictor",
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Model Prediction System',
+    selected = st.selectbox('Model Prediction System',
+                            ['Diamond price Prediction',
+                             'Diabetes Prediction',
+                             'Parkinsons Prediction'],
+                            index=0,
+                            help='Select a model for prediction')
 
-                           ['Diamond price Prediction',
-                            'Diabetes Prediction',
-                            'Parkinsons Prediction'],
-                           menu_icon='hospital-fill',
-                           icons=['activity', 'heart', 'person'],
-                           default_index=0)
 
 if selected == 'Diamond price Prediction':
     # Creating buttons
