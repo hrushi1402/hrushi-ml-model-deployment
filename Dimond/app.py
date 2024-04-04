@@ -56,6 +56,9 @@ with st.sidebar:
 
 
 if selected == 'Diamond price Prediction':
+
+    # page title
+    st.title('Diamond price Prediction using ML')
     # Creating buttons
     col1, col2, col3 = st.columns(3)
 
