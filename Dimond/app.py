@@ -41,7 +41,7 @@ def preprocess_data(carat, cut, color, clarity, depth, table, x, y, z):
 
 
 # Set page title and favicon
-st.set_page_config(page_title='Predictor', page_icon='💍,layout='wide', initial_sidebar_state='auto', author='Hrushikesh Gadade'')
+st.set_page_config(page_title='Predictor', page_icon='💍',layout='wide', initial_sidebar_state='auto', author='Hrushikesh Gadade')
 
 # sidebar for navigation
 with st.sidebar:
