@@ -62,8 +62,11 @@ if st.button('Predict Diamond Price'):
     # Preprocess input data
     data = preprocess_data(carat, cut, color, clarity, depth, table, x, y, z)
     
+    # Convert DataFrame to 2D array
+    data_array = data.values
+    
     # Make predictions using the model
-    prediction = model.predict(data)
+    prediction = model.predict(data_array)
     
     # Display the prediction to the user
     st.subheader("Prediction")
