@@ -50,15 +50,13 @@ st.set_page_config(page_title="Predictor",
 page_img= """
 <style>
 [data-testid="block-container"]{
-background-image: url("https://drive.google.com/file/d/1fzZKZzg5tw4CyVJZpvP4gVluZwHGMgSL/view?usp=drive_link")
-background-size: cover;
+background-color: #fefbd8;
 }
 
 <style>
 """
 
 st.markdown(page_img, unsafe_allow_html=True)
-
 # sidebar for navigation
 with st.sidebar:
     selected = st.selectbox('Model Prediction System',
