@@ -50,7 +50,8 @@ st.set_page_config(page_title="Predictor",
 page_img= """
 <style>
 [data-testid="block-container"]{
-background-color: #fefbd8;
+background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8zjW5v40shs/v1/-1x-1.jpg")
+background-size: cover;
 }
 
 <style>
