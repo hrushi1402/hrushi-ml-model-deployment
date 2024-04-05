@@ -40,18 +40,6 @@ def preprocess_data(carat, cut, color, clarity, depth, table, x, y, z):
     return data
 
 
-# Make Background Image 
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        background-image: url("https://drive.google.com/file/d/1fzZKZzg5tw4CyVJZpvP4gVluZwHGMgSL/view?usp=sharing");
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Set page configuration
 st.set_page_config(page_title="Predictor",
