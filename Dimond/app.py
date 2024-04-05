@@ -43,8 +43,21 @@ def preprocess_data(carat, cut, color, clarity, depth, table, x, y, z):
 
 # Set page configuration
 st.set_page_config(page_title="Predictor",
-                   layout="wide",
+                   
                    page_icon="💍")
+
+# Add CSS for background image
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://drive.google.com/file/d/1fzZKZzg5tw4CyVJZpvP4gVluZwHGMgSL/view?usp=drive_link") no-repeat center center fixed;
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # sidebar for navigation
 with st.sidebar:
