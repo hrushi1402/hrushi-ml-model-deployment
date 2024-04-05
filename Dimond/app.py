@@ -47,14 +47,13 @@ st.set_page_config(page_title="Predictor",
                    page_icon="💍")
 
 # Add CSS for background image
-page_img= """
+page_img = """
 <style>
-[data-testid="block-container"]{
-background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8zjW5v40shs/v1/-1x-1.jpg")
-background-size: cover;
+[data-testid="block-container"] {
+    background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8zjW5v40shs/v1/-1x-1.jpg");
+    background-size: cover;
 }
-
-<style>
+</style>
 """
 
 st.markdown(page_img, unsafe_allow_html=True)
