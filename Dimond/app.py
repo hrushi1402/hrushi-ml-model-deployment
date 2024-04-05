@@ -47,17 +47,17 @@ st.set_page_config(page_title="Predictor",
                    page_icon="💍")
 
 # Add CSS for background image
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://drive.google.com/file/d/1fzZKZzg5tw4CyVJZpvP4gVluZwHGMgSL/view?usp=drive_link") no-repeat center center fixed;
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+page_img= """
+<style>
+[data-testid="block-container"]{
+background-image: url("https://drive.google.com/file/d/1fzZKZzg5tw4CyVJZpvP4gVluZwHGMgSL/view?usp=drive_link")
+background-size: cover;
+}
+
+<style>
+"""
+
+st.markdown(page_img, unsafe_allow_html=True)
 
 # sidebar for navigation
 with st.sidebar:
