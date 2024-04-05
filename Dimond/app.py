@@ -114,7 +114,7 @@ if selected == 'Diabetes Prediction':
     page_img = """
     <style>
     [data-testid="block-container"] {
-        background-image: url("https://drive.google.com/file/d/1pLo79Kd3fHon0rpSL7dRrTnwXape_JJg/view?usp=sharing");
+        background-image: url("https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/584/244/datas/gallery.jpg");
         background-size: cover;
     }
     </style>
@@ -183,7 +183,7 @@ if selected == "Parkinsons Prediction":
     page_img = """
     <style>
     [data-testid="block-container"] {
-        background-image: url("https://drive.google.com/file/d/1pLo79Kd3fHon0rpSL7dRrTnwXape_JJg/view?usp=sharing");
+        background-image: url("https://parkinsonscenter.org/wp-content/uploads/2023/06/Regional-Neurological_Brain-Science-1024x536.jpeg");
         background-size: cover;
     }
     </style>
