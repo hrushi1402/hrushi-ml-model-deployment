@@ -46,17 +46,7 @@ st.set_page_config(page_title="Predictor",
                    
                    page_icon="💍")
 
-# Add CSS for background image
-page_img = """
-<style>
-[data-testid="block-container"] {
-    background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8zjW5v40shs/v1/-1x-1.jpg");
-    background-size: cover;
-}
-</style>
-"""
 
-st.markdown(page_img, unsafe_allow_html=True)
 # sidebar for navigation
 with st.sidebar:
     selected = st.selectbox('Model Prediction System',
@@ -69,6 +59,19 @@ with st.sidebar:
 
 if selected == 'Diamond price Prediction':
 
+    # Add CSS for background image
+    page_img = """
+    <style>
+    [data-testid="block-container"] {
+        background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8zjW5v40shs/v1/-1x-1.jpg");
+        background-size: cover;
+    }
+    </style>
+    """
+
+    st.markdown(page_img, unsafe_allow_html=True)
+
+    
     # page title
     st.title('Diamond price Prediction using ML')
     # Creating buttons
@@ -107,6 +110,20 @@ if selected == 'Diamond price Prediction':
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
 
+    # Add CSS for background image
+    page_img = """
+    <style>
+    [data-testid="block-container"] {
+        background-image: url("https://drive.google.com/file/d/1pLo79Kd3fHon0rpSL7dRrTnwXape_JJg/view?usp=sharing");
+        background-size: cover;
+    }
+    </style>
+    """
+
+    st.markdown(page_img, unsafe_allow_html=True)
+
+
+    
     # page title
     st.title('Diabetes Prediction using ML')
 
@@ -162,6 +179,18 @@ if selected == 'Diabetes Prediction':
 # Parkinson's Prediction Page
 if selected == "Parkinsons Prediction":
 
+    # Add CSS for background image
+    page_img = """
+    <style>
+    [data-testid="block-container"] {
+        background-image: url("https://drive.google.com/file/d/1pLo79Kd3fHon0rpSL7dRrTnwXape_JJg/view?usp=sharing");
+        background-size: cover;
+    }
+    </style>
+    """
+
+    st.markdown(page_img, unsafe_allow_html=True)
+    
     # page title
     st.title("Parkinson's Disease Prediction using ML")
 
