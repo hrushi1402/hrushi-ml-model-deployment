@@ -45,7 +45,17 @@ def preprocess_data(carat, cut, color, clarity, depth, table, x, y, z):
 st.set_page_config(page_title="Predictor",
                    
                    page_icon="💍")
-
+# Apply custom CSS to increase page width
+st.markdown(
+    """
+    <style>
+    .reportview-container .main .block-container {
+        max-width: 1200px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # sidebar for navigation
 with st.sidebar:
