@@ -8,6 +8,13 @@ with st.sidebar:
          default_index=1)
     selected
 
+
+# horizontal Menu
+selected2 = option_menu(None, ["Home", "ML Models", "Portfolio"], 
+    icons=['house', 'cloud-upload', "list-task", 'gear'], 
+    menu_icon="cast", default_index=0, orientation="horizontal")
+selected2
+
 # sidebar for navigation
 with st.sidebar:
     selected = st.selectbox('Model Prediction System',
@@ -16,8 +23,3 @@ with st.sidebar:
                              'Parkinsons Prediction'],
                             index=0,
                             help='Select a model for prediction')
-# horizontal Menu
-selected2 = option_menu(None, ["Home", "ML Models", "Portfolio"], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-    selected2
