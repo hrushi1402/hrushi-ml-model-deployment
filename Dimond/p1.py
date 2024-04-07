@@ -1,21 +1,6 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 
-with st.sidebar:
-    selected = option_menu("Main Menu", ['Diamond price Prediction',
-                             'Diabetes Prediction',
-                             'Parkinsons Prediction'], 
-         default_index=1)
-    selected
-
-
-# horizontal Menu
-selected2 = option_menu(None, ["Home", "ML Models", "Portfolio"], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-selected2
-
-# sidebar for navigation
+# Sidebar for navigation
 with st.sidebar:
     selected = st.selectbox('Model Prediction System',
                             ['Diamond price Prediction',
@@ -23,3 +8,22 @@ with st.sidebar:
                              'Parkinsons Prediction'],
                             index=0,
                             help='Select a model for prediction')
+
+# Main content
+if selected == 'Diamond price Prediction':
+    st.write("You selected Diamond price Prediction")
+elif selected == 'Diabetes Prediction':
+    st.write("You selected Diabetes Prediction")
+elif selected == 'Parkinsons Prediction':
+    st.write("You selected Parkinsons Prediction")
+
+# Horizontal Menu
+selected2 = st.radio("",
+                     ["Home", "ML Models", "Portfolio"],
+                     index=0)
+if selected2 == "Home":
+    st.write("You selected Home")
+elif selected2 == "ML Models":
+    st.write("You selected ML Models")
+elif selected2 == "Portfolio":
+    st.write("You selected Portfolio")
