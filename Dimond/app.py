@@ -12,8 +12,8 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 with open(f"{working_dir}/Diamond.pkl", "rb") as f:
     model = pickle.load(f)
 # Load the saved model
-with open(f"{working_dir}/parkinsons_model.pkl", "rb") as f:
-    parkinsons_model = pickle.load(f)
+with open(f"{working_dir}/parkinsons_model.pkl", "rb") as f1:
+    parkinsons_model = pickle.load(f1)
 # Define mappings for categorical variables
 cut_n = {'Ideal':1,'Premium':2,'Very Good':3,'Good':4,'Fair':5}
 color_n = {'J':7,'I':6,'H':5,'G':4,'F':3,'E':2,'D':1}
