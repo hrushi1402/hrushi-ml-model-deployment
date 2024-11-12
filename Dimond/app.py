@@ -123,15 +123,10 @@ if selected == 'Diamond price Prediction':
         st.write("Predicted price:", prediction[0])
 
 #
-import joblib
-import streamlit as st
-
-# Load the diabetes model
-#diabetes_model = joblib.load("path/to/diabetes_model.pkl")  # Ensure correct file path
-
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
-    # Page setup
+
+    # Add CSS for background image
     page_img = """
     <style>
     [data-testid="block-container"] {
@@ -140,38 +135,51 @@ if selected == 'Diabetes Prediction':
     }
     </style>
     """
+
     st.markdown(page_img, unsafe_allow_html=True)
 
+
+    
+    # page title
     st.title('Diabetes Prediction using ML')
 
-    # Get input data from user
+    # getting the input data from the user
     col1, col2, col3 = st.columns(3)
 
     with col1:
         Pregnancies = st.text_input('Number of Pregnancies')
+
     with col2:
         Glucose = st.text_input('Glucose Level')
+
     with col3:
         BloodPressure = st.text_input('Blood Pressure value')
+
     with col1:
         SkinThickness = st.text_input('Skin Thickness value')
+
     with col2:
-        Insulin = st.text_input('Insulin Level')
-    with col3:
         BMI = st.text_input('BMI value')
+
     with col1:
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
+
     with col2:
         Age = st.text_input('Age of the Person')
 
+
+    # code for Prediction
     diab_diagnosis = ''
 
+    # creating a button for Prediction
+
     if st.button('Diabetes Test Result'):
-        user_input = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin,
+
+        user_input = [Pregnancies, Glucose, BloodPressure, SkinThickness,
                       BMI, DiabetesPedigreeFunction, Age]
+
         user_input = [float(x) for x in user_input]
 
-        # Predict with the loaded model
         diab_prediction = diabetes_model.predict([user_input])
 
         if diab_prediction[0] == 1:
@@ -180,7 +188,6 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'The person is not diabetic'
 
     st.success(diab_diagnosis)
-
 #
 
 # Parkinson's Prediction Page
