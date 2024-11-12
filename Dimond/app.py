@@ -15,8 +15,8 @@ with open(f"{working_dir}/Diamond.pkl", "rb") as f:
 with open(f"{working_dir}/parkinsons_model.pkl", "rb") as f1:
     parkinsons_model = pickle.load(f1)
 
-with open(f"{working_dir}/diabetes_model.pkl", "rb") as f1:
-    diabetes_model = pickle.load(f1)
+with open(f"{working_dir}/diabetes_model.pkl", "rb") as f2:
+    diabetes_model = pickle.load(f2)
 # Define mappings for categorical variables
 cut_n = {'Ideal':1,'Premium':2,'Very Good':3,'Good':4,'Fair':5}
 color_n = {'J':7,'I':6,'H':5,'G':4,'F':3,'E':2,'D':1}
@@ -122,10 +122,16 @@ if selected == 'Diamond price Prediction':
         st.subheader("Prediction")
         st.write("Predicted price:", prediction[0])
 
+#
+import joblib
+import streamlit as st
+
+# Load the diabetes model
+#diabetes_model = joblib.load("path/to/diabetes_model.pkl")  # Ensure correct file path
+
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
-
-    # Add CSS for background image
+    # Page setup
     page_img = """
     <style>
     [data-testid="block-container"] {
@@ -134,54 +140,38 @@ if selected == 'Diabetes Prediction':
     }
     </style>
     """
-
     st.markdown(page_img, unsafe_allow_html=True)
 
-
-    
-    # page title
     st.title('Diabetes Prediction using ML')
 
-    # getting the input data from the user
+    # Get input data from user
     col1, col2, col3 = st.columns(3)
 
     with col1:
         Pregnancies = st.text_input('Number of Pregnancies')
-
     with col2:
         Glucose = st.text_input('Glucose Level')
-
     with col3:
         BloodPressure = st.text_input('Blood Pressure value')
-
     with col1:
         SkinThickness = st.text_input('Skin Thickness value')
-
     with col2:
         Insulin = st.text_input('Insulin Level')
-
     with col3:
         BMI = st.text_input('BMI value')
-
     with col1:
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
-
     with col2:
         Age = st.text_input('Age of the Person')
 
-
-    # code for Prediction
     diab_diagnosis = ''
 
-    # creating a button for Prediction
-
     if st.button('Diabetes Test Result'):
-
         user_input = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin,
                       BMI, DiabetesPedigreeFunction, Age]
-
         user_input = [float(x) for x in user_input]
 
+        # Predict with the loaded model
         diab_prediction = diabetes_model.predict([user_input])
 
         if diab_prediction[0] == 1:
@@ -190,6 +180,8 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'The person is not diabetic'
 
     st.success(diab_diagnosis)
+
+#
 
 # Parkinson's Prediction Page
 if selected == "Parkinsons Prediction":
