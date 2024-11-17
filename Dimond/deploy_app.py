@@ -2,6 +2,7 @@
 
 # Install dependencies
 import os
+os.system('pip install -r "/content/hrushi-ml-model-deployment/requirements.txt"')
 from threading import Thread
 from pyngrok import ngrok
 
