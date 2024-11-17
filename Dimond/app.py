@@ -299,31 +299,7 @@ if selected == "Parkinsons Prediction":
 
     st.success(parkinsons_diagnosis)
 
-# Add CSS for top-right button
-close_button_css = """
-    <style>
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #f44336;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 15px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .close-button:hover {
-        background-color: #d32f2f;
-    }
-    </style>
-"""
-st.markdown(close_button_css, unsafe_allow_html=True)
 
-# Add the button in the top-right corner
-st.markdown('<button class="close-button" onclick="window.close()">Close App</button>', unsafe_allow_html=True)
 # Logic to kill ngrok session and stop the app when the button is clicked
 if st.button('Close App (Backend)'):
     st.warning("Closing the app... Please wait.")
