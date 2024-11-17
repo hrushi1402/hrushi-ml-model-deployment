@@ -300,26 +300,7 @@ if selected == "Parkinsons Prediction":
     st.success(parkinsons_diagnosis)
 
 
-# Custom CSS for top-right corner positioning
-st.markdown(
-    """
-    <style>
-    .top-right-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 9999;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
-# Button with custom styling
-if st.markdown('<div class="top-right-button"><button class="stButton">Close App (Backend)</button></div>', unsafe_allow_html=True):
-    st.warning("Closing the app... Please wait.")
-    ngrok.kill()  # Stop the ngrok session
-    st.stop()
 # Footer
 st.markdown('---')
 st.write('Made with ❤️ by Hrushikesh Gadade')
